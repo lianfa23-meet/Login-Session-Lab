@@ -9,10 +9,20 @@
 
 <!-- Display the variables from the login session here!
  -->
- <ul>
- 	<li> Author: {{name}}</li>
- 	<li> Age: {{age}}</li>
- 	<li> Quote: {{quote}}</li>
- </ul>
+ <a href='/'> Add </a>
+<table>
+	<tr>
+		<th>Author</th>
+		<th> age </th>
+		<th> quote </th>
+	</tr>
+	{% for post in posts %}
+	<tr> 
+		<td> {{post[0]}} </td>
+		<td> {{post[1]}}</td>
+		<td> {{post[2]}}</td>
+	</tr>
+	{% endfor %}
+</table>
 </body>
 </html>
